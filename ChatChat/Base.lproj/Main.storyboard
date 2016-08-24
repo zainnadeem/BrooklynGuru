@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="BrooklynGuru" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="THE GURU" translatesAutoresizingMaskIntoConstraints="NO" id="Zgd-Bz-T8P">
+                                <rect key="frame" x="150" y="45" width="300" height="510"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIn-ew-tdp">
+                                <rect key="frame" x="150" y="517" width="301" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Login anonymously">
+                                    <color key="titleColor" red="0.75686274509999996" green="0.87450980389999999" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aW7-P9-FCZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75686274509803919" green="0.87450980392156863" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zgd-Bz-T8P" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="8Zt-ds-cyU"/>
+                            <constraint firstItem="JIn-ew-tdp" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" constant="1" id="9hv-wU-5Ah"/>
+                            <constraint firstItem="Zgd-Bz-T8P" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="DZI-5p-zXq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JIn-ew-tdp" secondAttribute="bottom" constant="47" id="MVT-E5-fDK"/>
+                            <constraint firstItem="Zgd-Bz-T8P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bjG-gI-jW5"/>
+                            <constraint firstItem="JIn-ew-tdp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eyq-ki-6hc"/>
+                            <constraint firstItem="Zgd-Bz-T8P" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="j4l-CR-da9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="8CN-Ua-xvG" kind="presentation" identifier="LoginToChat" id="C1q-pb-YWz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="389"/>
+        </scene>
+        <!--BrooklynGuru-->
+        <scene sceneID="b7U-kW-Qaq">
+            <objects>
+                <viewController title="BrooklynGuru" id="5z3-67-Woy" customClass="ChatViewController" customModule="BrooklynGuru" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3hD-Iu-d73"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZWp-Ez-oci"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tER-Sr-56a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7rn-5O-9oT"/>
+                    <connections>
+                        <segue destination="mMj-lq-OB3" kind="presentation" identifier="endScreen" id="VnJ-9X-SNC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FHj-ro-py4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1788" y="389"/>
+        </scene>
+        <!--End Screen-->
+        <scene sceneID="RXA-DY-02Q">
+            <objects>
+                <viewController id="mMj-lq-OB3" customClass="endScreen" customModule="BrooklynGuru" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jFp-sH-Xbe"/>
+                        <viewControllerLayoutGuide type="bottom" id="LI6-qi-7As"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bJd-Ok-5Qi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="THE GURU" translatesAutoresizingMaskIntoConstraints="NO" id="Esv-B8-97F">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tO8-je-v01">
+                                <rect key="frame" x="150" y="526" width="300" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Find Another Spot">
+                                    <color key="titleColor" red="0.75686274509999996" green="0.87450980389999999" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tPg-9p-JFj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Doe-9r-sTQ">
+                                <rect key="frame" x="150" y="465" width="300" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Sign Up to Be a Guru">
+                                    <color key="titleColor" red="0.75686274509999996" green="0.87450980389999999" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iqc-0V-lzN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75686274509999996" green="0.87450980389999999" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Doe-9r-sTQ" firstAttribute="centerX" secondItem="bJd-Ok-5Qi" secondAttribute="centerX" id="1EY-0z-r7U"/>
+                            <constraint firstItem="Esv-B8-97F" firstAttribute="centerX" secondItem="bJd-Ok-5Qi" secondAttribute="centerX" id="4xx-3V-jgr"/>
+                            <constraint firstItem="Doe-9r-sTQ" firstAttribute="width" secondItem="bJd-Ok-5Qi" secondAttribute="width" multiplier="0.5" id="I7u-QE-fUx"/>
+                            <constraint firstItem="tO8-je-v01" firstAttribute="width" secondItem="bJd-Ok-5Qi" secondAttribute="width" multiplier="0.5" id="K3F-gs-55g"/>
+                            <constraint firstItem="Doe-9r-sTQ" firstAttribute="bottom" secondItem="tO8-je-v01" secondAttribute="top" constant="-25" id="TuB-ce-Dyg"/>
+                            <constraint firstItem="Esv-B8-97F" firstAttribute="width" secondItem="bJd-Ok-5Qi" secondAttribute="width" id="VyM-cm-DaQ"/>
+                            <constraint firstItem="Esv-B8-97F" firstAttribute="centerY" secondItem="bJd-Ok-5Qi" secondAttribute="centerY" id="Xkn-Xs-Coh"/>
+                            <constraint firstItem="tO8-je-v01" firstAttribute="centerX" secondItem="bJd-Ok-5Qi" secondAttribute="centerX" id="dHi-d0-pHG"/>
+                            <constraint firstItem="LI6-qi-7As" firstAttribute="top" secondItem="tO8-je-v01" secondAttribute="bottom" constant="38" id="gYL-Wx-j6N"/>
+                            <constraint firstItem="Esv-B8-97F" firstAttribute="height" secondItem="bJd-Ok-5Qi" secondAttribute="height" id="i1O-Qe-mm7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wnB-wZ-lmg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2515" y="389"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="emB-h0-MiE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8CN-Ua-xvG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bLZ-qs-Dqh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.75686274509803919" green="0.8784313725490196" blue="0.83137254901960789" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5z3-67-Woy" kind="relationship" relationship="rootViewController" id="jNR-Uc-ukM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XIN-tW-H0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976" y="389"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="THE GURU" width="1178" height="2094"/>
+    </resources>
+</document>
